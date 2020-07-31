@@ -1,4 +1,4 @@
-makeMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
     set <- function(y) {
         x <<- y
@@ -12,7 +12,7 @@ makeMatrix <- function(x = matrix()) {
          getinverse = getinverse)
 }
 
-cacheinverse <- function(x, ...) {
+cacheSolve <- function(x, ...) {
     inv <- x$getinverse()
     if(!is.null(inv)) {
         message("getting cached inverse")
